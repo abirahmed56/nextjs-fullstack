@@ -10,5 +10,11 @@
     "description": "A new book parches by me",
     "imgUrl": "https://m.media-amazon.com/images/I/51B7kuFwQFL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
     "id": 1678134606233
+  },
+  {
+    "name": "Dark Psychology",
+    "description": "Dark Psychology",
+    "imgUrl": "https://m.media-amazon.com/images/I/41Vlgf2IPlL._SX331_BO1,204,203,200_.jpg",
+    "id": 1678136086880
   }
 ]

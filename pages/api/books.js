@@ -1,28 +1,26 @@
-// import fs from "fs";
-// import path from "path";
+import fs from "fs";
+import path from "path";
 
-// function getData() {
-//   const filePath = path.join(process.cwd(), "data", "books.json");
-//   const fileData = fs.readFileSync(filePath);
-//   const data = JSON.parse(fileData);
+function getData() {
+  const filePath = path.join(process.cwd(), "data", "books.json");
+  const fileData = fs.readFileSync(filePath);
+  const data = JSON.parse(fileData);
 
-//   return data;
-// }
-
-import 
+  return data;
+}
 function handler(req, res) {
   if (req.method === "GET") {
-    // const data = getData();
+    const data = getData();
     return res.status(200).json({ message: data });
   } else if (req.method == "POST") {
-    const { name, description, imgurl } = req.body;
+    const { name, description, imgUrl } = req.body;
 
-    const newBook = { name, description, imgurl };
-    // const filePath = path.join(process.cwd(), "data", "books.json");
-    // const data = getData();
-    // data.push(newBook);
-    // fs.writeFileSync(filePath, JSON.stringify(data));
-    // return res.status(200).json({ message: "Added", book: newBook });
+    const newBook = { name, description, imgUrl, id: Date.now() };
+    const filePath = path.join(process.cwd(), "data", "books.json");
+    const data = getData();
+    data.push(newBook);
+    fs.writeFileSync(filePath, JSON.stringify(data))
+    return res.status(200).json({ message: "Added", book: newBook });
   }
   
 }
