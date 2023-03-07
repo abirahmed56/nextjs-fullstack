@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useState } from "react";
 import classes from "../styles/Form.module.css";
 
@@ -62,6 +63,10 @@ function AddBook() {
         />
         <button type="submit">Submit</button>
       </form>
+      <br/>
+      <br />
+      <Link href="/">Previous Page</Link>
+  
     </div>
   );
 }

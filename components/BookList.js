@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import BookItem from "./BookItem";
 import classes from "../styles/Books.module.css"
+import Link from "next/link";
 
 function BookList() {
   const [data, setData] = useState();
@@ -29,6 +30,7 @@ function BookList() {
             </li>
           ))}
       </ul>
+      <ul><Link href="/add">Add Book</Link></ul>
     </div>
   );
 }
